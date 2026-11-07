@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy 18th Birthday, Beautiful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="birthday-style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <div class="spark spark-one"></div>
+    <div class="spark spark-two"></div>
+    <div class="spark spark-three"></div>
+
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Play the birthday song">
+      <span class="music-icon">♫</span>
+      <span class="music-text">favorite song</span>
+    </button>
+
+    <audio id="birthdayAudio" preload="auto" loop>
+      <source src="Shekhinah - Suited.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="welcome-screen screen is-active" id="welcomeScreen" aria-labelledby="welcomeTitle">
+      <div class="eyebrow"><span></span> a birthday note, just for you <span></span></div>
+      <h1 id="welcomeTitle">Happy 18th Birthday<br><em>beautiful soul.</em></h1>
+      <p class="intro">Eighteen is the start of a whole new chapter. Thank you for the kindness, encouragement, and laughter you’ve shared with me. I hope today reminds you how much good you bring into the lives around you—and that the year ahead brings you joy, confidence, and room to dream big.</p>
+
+      <button class="envelope-button" id="envelopeButton" type="button" aria-label="Open your 18th birthday card">
+        <span class="envelope-shadow"></span>
+        <span class="envelope">
+          <span class="envelope-flap"></span>
+          <span class="envelope-paper"><strong>Happy<br>18th</strong><small>a little note for you</small></span>
+          <span class="envelope-front"></span>
+          <span class="seal">❤</span>
+        </span>
+        <span class="open-label">tap to open <b>↗</b></span>
+      </button>
+
+      <p class="tiny-note">No big speech—just a little reminder that you deserve a lovely day.</p>
+    </section>
+
+    <section class="question-screen screen" id="questionScreen" aria-labelledby="questionTitle" hidden>
+      <div class="question-topline"><span class="question-count" id="questionCount">01 / 03</span><span>three birthday wishes</span></div>
+      <div class="question-content">
+        <div class="question-mark">?</div>
+        <p class="eyebrow">a little birthday countdown</p>
+        <h2 id="questionTitle">Ready to celebrate<br><em>your next beautiful chapter?</em></h2>
+        <p class="question-copy" id="questionCopy">Here’s to a year of peace, laughter, growth, and good things you never saw coming.</p>
+        <div class="question-actions">
+          <button class="yes-button" id="yesButton" type="button">Yes, let’s celebrate <span>→</span></button>
+          <button class="soft-no" id="noButton" type="button">skip to photos</button>
+        </div>
+        <p class="answer-hint" id="answerHint" aria-live="polite"></p>
+      </div>
+      <div class="question-progress" aria-hidden="true"><span id="progressBar"></span></div>
+    </section>
+
+    <section class="slideshow-screen screen" id="slideshowScreen" aria-labelledby="slideshowTitle" hidden>
+      <header class="slideshow-header">
+        <div>
+          <p class="eyebrow"><span></span> celebrating you <span></span></p>
+          <h2 id="slideshowTitle">For someone <em>truly special</em></h2>
+        </div>
+        <button class="sound-button" id="replayButton" type="button" title="Replay the birthday message">↺ <span>replay</span></button>
+      </header>
+
+      <div class="gallery-layout">
+        <div class="photo-stage">
+          <div class="photo-frame">
+            <img id="slideImage" src="WhatsApp Image 2026-11-07 at 02.13.00.jpeg" alt="A birthday photo to celebrate her 18th">
+            <div class="photo-wash"></div>
+            <div class="slide-number" id="slideNumber">01</div>
+          </div>
+          <div class="stage-caption"><span class="caption-line"></span><p id="slideCaption">A new chapter, and so many good things ahead.</p></div>
+        </div>
+        <div class="message-panel">
+          <span class="big-quote">“</span>
+          <p class="message-kicker">a birthday note from me</p>
+          <p class="message">Happy 18th birthday. Today is all about celebrating you—the one-of-a-kind person whose smile could make an ordinary day feel brighter. I’m thankful our paths crossed, for the moments we shared, and for the happiness you brought into my life. Those memories will always mean something to me. As you step into this new chapter, I hope it brings you laughter that comes easily, dreams that grow bigger, and countless little reasons to feel proud of yourself. May you be celebrated not just today, but in all the ways you deserve. Keep shining in your own way; there’s no one else quite like you.</p>
+          <div class="signature"><span></span> wishing you the happiest 18th</div>
+        </div>
+      </div>
+
+      <div class="gallery-controls">
+        <button class="arrow-button" id="previousButton" type="button" aria-label="Previous photo">←</button>
+        <div class="dots" id="dots" aria-label="Choose a photo"></div>
+        <button class="arrow-button" id="nextButton" type="button" aria-label="Next photo">→</button>
+        <button class="play-button" id="playButton" type="button"><span id="playIcon">Ⅱ</span> <span id="playText">pause</span></button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
